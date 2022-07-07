@@ -1,0 +1,35 @@
+name: Shadowrocket
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 22 1,15 * *"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run
+        run: |
+          echo "COMMIT_INFO=Uploaded on $(date +%Y%m%d%H%M)" >> $GITHUB_ENV
+          mkdir master
+          cd master
+          curl -o Complete.conf https://raw.githubusercontent.com/dler-io/Rules/main/Shadowrocket/Complete.conf
+          curl -o StreamingSE.list https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list
+          grep bili StreamingSE.list>Streaming.list
+          sed -i "/\[Rule\]/i\[Proxy Group\]" Complete.conf
+          sed -i "/\[Rule\]/i\港台节点 \= select\,policy\-regex\-filter\=\(港\|台\)" Complete.conf
+          sed -i "/\[Rule\]/i\Streaming \= select\,DIRECT\,港台节点\,PROXY" Complete.conf
+          sed -i "/\[Rule\]/i\ " Complete.conf
+          sed -i "/\[Rule\]/a\RULE\-SET\,https\:\/\/raw\.githubusercontent\.com\/TomKing062\/Shadowrocket\/master\/Streaming\.list\,Streaming" Complete.conf
+
+
+      - name: push
+        run: |
+          cd master
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git init
+          git checkout -b master
+          git add .
+          git commit -m "${{ env.COMMIT_INFO }}"
+          git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+          git push -f -u origin master
