@@ -18,11 +18,14 @@ jobs:
           curl -o Complete.conf https://raw.githubusercontent.com/dler-io/Rules/main/Shadowrocket/Complete.conf
           curl -o StreamingSE.list https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list
           grep bili StreamingSE.list>Streaming.list
+          curl -o AppleCN.list https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/apple-cn.txt
+          sed -i "s/full:/DOMAIN,/g" AppleCN.list
           sed -i "/\[Rule\]/i\[Proxy Group\]" Complete.conf
           sed -i "/\[Rule\]/i\EmbyServer \= select\,policy\-regex\-filter\=\(free\)" Complete.conf
           sed -i "/\[Rule\]/i\港台节点 \= select\,policy\-regex\-filter\=\(港\|台\)" Complete.conf
           sed -i "/\[Rule\]/i\Streaming \= select\,DIRECT\,港台节点\,PROXY" Complete.conf
           sed -i "/\[Rule\]/i\ " Complete.conf
+          sed -i "/\[Rule\]/a\RULE\-SET\,https\:\/\/raw\.githubusercontent\.com\/TomKing062\/Shadowrocket\/master\/AppleCN\.list\,DIRECT" Complete.conf
           sed -i "/\[Rule\]/a\RULE\-SET\,https\:\/\/raw\.githubusercontent\.com\/TomKing062\/Shadowrocket\/master\/Streaming\.list\,Streaming" Complete.conf
           sed -i "/\[Rule\]/a\DOMAIN\-KEYWORD\,emby\,EmbyServer" Complete.conf
 
