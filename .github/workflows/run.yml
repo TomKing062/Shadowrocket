@@ -12,20 +12,30 @@ jobs:
     steps:
       - name: run
         run: |
-          echo "COMMIT_INFO=Uploaded on $(date +%Y%m%d%H%M)" >> $GITHUB_ENV
           mkdir master
+          echo "COMMIT_INFO=Uploaded on $(date +%Y%m%d%H%M)" >> $GITHUB_ENV
+          curl -o Head.conf https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%204/Head.conf
+          curl -o Rule.conf https://raw.githubusercontent.com/TomKing062/Shadowrocket/main/Rule.conf
+          cat Head.conf Rule.conf>master/Surge.conf
           cd master
-          curl -o Complete.conf https://raw.githubusercontent.com/dler-io/Rules/main/Shadowrocket/Complete.conf
           curl -o StreamingSE.list https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list
           grep bili StreamingSE.list>Streaming.list
+          
+          sed -i "/\[Rule\]/i\[Proxy Group\]" Surge.conf
+          sed -i "/\[Rule\]/i\EmbyServer \= select\,policy\-regex\-filter\=\(free\)" Surge.conf
+          sed -i "/\[Rule\]/i\港台节点 \= select\,policy\-regex\-filter\=\(港\|台\)" Surge.conf
+          sed -i "/\[Rule\]/i\Streaming \= select\,DIRECT\,港台节点\,PROXY" Surge.conf
+          sed -i "/\[Rule\]/a\RULE\-SET\,https\:\/\/raw\.githubusercontent\.com\/TomKing062\/Shadowrocket\/master\/Streaming\.list\,Streaming" Surge.conf
+          sed -i "/\[Rule\]/a\DOMAIN\-KEYWORD\,emby\,EmbyServer" Surge.conf
+          
+          curl -o Complete.conf https://raw.githubusercontent.com/dler-io/Rules/main/Shadowrocket/Complete.conf
           sed -i "/\[Rule\]/i\[Proxy Group\]" Complete.conf
           sed -i "/\[Rule\]/i\EmbyServer \= select\,policy\-regex\-filter\=\(free\)" Complete.conf
           sed -i "/\[Rule\]/i\港台节点 \= select\,policy\-regex\-filter\=\(港\|台\)" Complete.conf
           sed -i "/\[Rule\]/i\Streaming \= select\,DIRECT\,港台节点\,PROXY" Complete.conf
-          sed -i "/\[Rule\]/i\ " Complete.conf
-          sed -i "/\[Rule\]/a\RULE\-SET\,https\:\/\/raw\.githubusercontent\.com\/Loyalsoldier\/surge-rules\/release\/ruleset\/apple\.txt\,DIRECT" Complete.conf
           sed -i "/\[Rule\]/a\RULE\-SET\,https\:\/\/raw\.githubusercontent\.com\/TomKing062\/Shadowrocket\/master\/Streaming\.list\,Streaming" Complete.conf
           sed -i "/\[Rule\]/a\DOMAIN\-KEYWORD\,emby\,EmbyServer" Complete.conf
+          sed -i "/\[Rule\]/a\RULE\-SET\,https\:\/\/raw\.githubusercontent\.com\/Loyalsoldier\/surge-rules\/release\/ruleset\/apple\.txt\,DIRECT" Complete.conf
 
       - name: push
         run: |
