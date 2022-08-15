@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - '**.md'
   schedule:
     - cron: "0 22 * * 0"
 jobs:
@@ -27,6 +29,7 @@ jobs:
           sed -i "/\[Rule\]/i\港台节点 \= select\,policy\-regex\-filter\=\(港\|台\)\,select\=5" Surge.conf
           sed -i "/\[Rule\]/i\Streaming \= select\,DIRECT\,港台节点\,PROXY" Surge.conf
           sed -i "/RULE\-SET\,SYSTEM\,DIRECT/a\RULE\-SET\,https\:\/\/raw\.githubusercontent\.com\/TomKing062\/Shadowrocket\/master\/Streaming\.list\,Streaming" Surge.conf
+          sed -i "/RULE\-SET\,SYSTEM\,DIRECT/a\DOMAIN\-SUFFIX\,app\-res\.ww\.revuestarlight\-relive\.com\,DIRECT" Surge.conf
           sed -i "/RULE\-SET\,SYSTEM\,DIRECT/a\DOMAIN\-KEYWORD\,emby\,EmbyServer" Surge.conf
           sed -i "/test/d"  Surge.conf
           sed -i "/#/d"  Surge.conf
@@ -38,6 +41,7 @@ jobs:
           sed -i "/\[Rule\]/i\Streaming \= select\,DIRECT\,港台节点\,PROXY" Complete.conf
           sed -i "/\[Rule\]/a\RULE\-SET\,https\:\/\/raw\.githubusercontent\.com\/Loyalsoldier\/surge-rules\/release\/ruleset\/apple\.txt\,DIRECT" Complete.conf
           sed -i "/\[Rule\]/a\RULE\-SET\,https\:\/\/raw\.githubusercontent\.com\/TomKing062\/Shadowrocket\/master\/Streaming\.list\,Streaming" Complete.conf
+          sed -i "/\[Rule\]/a\DOMAIN\-SUFFIX\,app\-res\.ww\.revuestarlight\-relive\.com\,DIRECT" Complete.conf
           sed -i "/\[Rule\]/a\DOMAIN\-KEYWORD\,emby\,EmbyServer" Complete.conf
 
       - name: push
