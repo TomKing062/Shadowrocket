@@ -31,7 +31,6 @@ jobs:
           sed -i "/RULE\-SET\,SYSTEM\,DIRECT/a\RULE\-SET\,https\:\/\/raw\.githubusercontent\.com\/TomKing062\/Shadowrocket\/master\/Streaming\.list\,Streaming" Surge.conf
           sed -i "/RULE\-SET\,SYSTEM\,DIRECT/a\DOMAIN\-SUFFIX\,app\-res\.ww\.revuestarlight\-relive\.com\,DIRECT" Surge.conf
           sed -i "/RULE\-SET\,SYSTEM\,DIRECT/a\DOMAIN\-KEYWORD\,emby\,EmbyServer" Surge.conf
-          sed -i "/test/d"  Surge.conf
           sed -i "/#/d"  Surge.conf
           
           curl -o Complete.conf https://raw.githubusercontent.com/dler-io/Rules/main/Shadowrocket/Complete.conf
