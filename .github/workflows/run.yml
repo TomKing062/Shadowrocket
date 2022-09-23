@@ -23,7 +23,7 @@ jobs:
           cd master
           curl -o StreamingSE.list https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list
           grep bili StreamingSE.list>Streaming.list
-          sed -i "/#/d"  Surge.conf
+          sed -i "/#/d" Surge.conf
 
       - name: push
         run: |
