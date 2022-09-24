@@ -22,8 +22,8 @@ jobs:
           curl -o MITM.conf https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising_MITM.sgmodule
           cat Head.conf Rule.conf MITM.conf>master/Surge.conf
           cd master
-          curl -sSL ${cn_cidr} | perl -ne '/^(\d{1,3}(\.\d{1,3}){3}\/\d{1,2})/ && print "IP-CIDR,$1,no-resolve\n"' > cncidr.txt
-          curl -sSL ${cn_cidr} | grep ":" | perl -ne '/(.+\/\d+)/ && print "IP-CIDR,$1,no-resolve\n"' >> cncidr.txt
+          curl -sSL ${{ env.cn_cidr }} | perl -ne '/^(\d{1,3}(\.\d{1,3}){3}\/\d{1,2})/ && print "IP-CIDR,$1,no-resolve\n"' > cncidr.txt
+          curl -sSL ${{ env.cn_cidr }} | grep ":" | perl -ne '/(.+\/\d+)/ && print "IP-CIDR,$1,no-resolve\n"' >> cncidr.txt
           curl -o StreamingSE.list https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list
           grep bili StreamingSE.list>Streaming.list
           sed -i "/#/d" Surge.conf
