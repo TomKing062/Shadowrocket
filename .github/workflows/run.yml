@@ -37,8 +37,9 @@ jobs:
           cat Head.conf Rule.conf MITM.conf > master/Surge.conf
           sed -i "/#/d" master/Surge.conf
           cd domain-list-community
-          go run ./ --exportlists=category-companies
-          cat category-companies.txt | grep @cn | grep -Fv .cn > globaldirect-temp.txt
+          go run ./ --exportlists=category-companies,category-entertainment
+          cat category-companies.txt | grep @cn | grep -Fv .cn: > globaldirect-temp.txt
+          cat category-entertainment.txt | grep @cn | grep -Fv .cn: >> globaldirect-temp.txt
           cat globaldirect-temp.txt | grep -E "^full:" | awk -F ':' '{printf "DOMAIN,%s\n", $2}' > ../master/globaldirect.txt
           cat globaldirect-temp.txt | grep -E "^domain:" | awk -F ':' '{printf "DOMAIN-SUFFIX,%s\n", $2}' >> ../master/globaldirect.txt
 
