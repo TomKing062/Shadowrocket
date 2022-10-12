@@ -1,11 +1,6 @@
 name: Shadowrocket
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - '**.md'
   schedule:
     - cron: "0 4 * * 4"
 jobs:
