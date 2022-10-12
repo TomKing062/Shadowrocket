@@ -12,20 +12,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Go
-        uses: actions/setup-go@v3
+      - name: Delete workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
         with:
-          go-version: 1.18
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 0
+          keep_minimum_runs: 0
 
-      - name: Checkout v2fly/domain-list-community
+      - name: Checkout
         uses: actions/checkout@v3
         with:
-          repository: v2fly/domain-list-community
-          path: domain-list-community
+          ref: master
+          path: master
 
       - name: Run
         run: |
-          mkdir master
+          rm master/*
           curl -o cn.txt https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/cn.txt
           cat cn.txt | perl -ne '/^(\d{1,3}(\.\d{1,3}){3}\/\d{1,2})/ && print "IP-CIDR,$1,no-resolve\n"' > master/cncidr.txt
           cat cn.txt | grep ":" | perl -ne '/(.+\/\d+)/ && print "IP-CIDR,$1,no-resolve\n"' >> master/cncidr.txt
@@ -34,23 +37,15 @@ jobs:
           curl -o Head.conf https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%204/Head.conf
           curl -o Rule.conf https://raw.githubusercontent.com/TomKing062/Shadowrocket/main/Rule.conf
           curl -o MITM.conf https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising_MITM.sgmodule
-          cat Head.conf Rule.conf MITM.conf > master/Surge.conf
-          sed -i "/#/d" master/Surge.conf
-          cd domain-list-community
-          go run ./ --exportlists=category-companies,category-entertainment
-          cat category-companies.txt | grep @cn | grep -Fv .cn: > globaldirect-temp.txt
-          cat category-entertainment.txt | grep @cn | grep -Fv .cn: >> globaldirect-temp.txt
-          cat globaldirect-temp.txt | grep -E "^full:" | awk -F ':' '{printf "DOMAIN,%s\n", $2}' > ../master/globaldirect.txt
-          cat globaldirect-temp.txt | grep -E "^domain:" | awk -F ':' '{printf "DOMAIN-SUFFIX,%s\n", $2}' >> ../master/globaldirect.txt
+          cat Head.conf Rule.conf MITM.conf > master/Shadowrocket.conf
+          sed -i "/test/d" master/Shadowrocket.conf
+          sed -i "/#/d" master/Shadowrocket.conf
 
       - name: push
         run: |
           cd master
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git init
-          git checkout -b master
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           git commit -m "Uploaded on $(TZ='Asia/Shanghai' date +%Y%m%d%H%M)"
-          git remote add origin "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
-          git push -f -u origin master
+          git push
