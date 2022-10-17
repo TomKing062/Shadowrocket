@@ -28,6 +28,11 @@ jobs:
           cat Head.conf Rule.conf MITM.conf > master/Shadowrocket.conf
           sed -i "/test/d" master/Shadowrocket.conf
           sed -i "/#/d" master/Shadowrocket.conf
+          
+          curl -o Rule-edu.conf https://raw.githubusercontent.com/TomKing062/Shadowrocket/main/Rule-edu.conf
+          cat Head.conf Rule-edu.conf > master/Edu.conf
+          sed -i "/test/d" master/Edu.conf
+          sed -i "/#/d" master/Edu.conf
 
       - name: push
         run: |
