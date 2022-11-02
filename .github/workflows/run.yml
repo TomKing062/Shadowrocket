@@ -25,9 +25,10 @@ jobs:
       - name: Run
         run: |
           rm master/*
-          curl -o cn.txt https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/cn.txt
-          cat cn.txt | perl -ne '/^(\d{1,3}(\.\d{1,3}){3}\/\d{1,2})/ && print "IP-CIDR,$1\n"' > master/cncidr.txt
-          cat cn.txt | grep ":" | perl -ne '/(.+\/\d+)/ && print "IP-CIDR,$1\n"' >> master/cncidr.txt
+          curl -sSL https://raw.githubusercontent.com/gaoyifan/china-operator-ip/ip-lists/china.txt > direct.txt
+          curl -sSL https://raw.githubusercontent.com/felixonmars/chnroutes-alike/master/chnroutes-alike.txt >> direct.txt
+          sort -nu direct.txt | perl -ne '/^(\d{1,3}(\.\d{1,3}){3}\/\d{1,2})/ && print "IP-CIDR,$1\n"' > master/directcidr.txt
+          curl -sSL https://raw.githubusercontent.com/gaoyifan/china-operator-ip/ip-lists/china6.txt | grep ":" | perl -ne '/(.+\/\d+)/ && print "IP-CIDR,$1\n"' >> master/directcidr.txt
           curl -o StreamingSE.list https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list
           grep bili StreamingSE.list > master/Streaming.list
           curl -o Head.conf https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%204/Head.conf
@@ -37,6 +38,8 @@ jobs:
           sed -i "/test/d" master/Shadowrocket.conf
           sed -i "/#/d" master/Shadowrocket.conf
           
+          curl -sSL https://raw.githubusercontent.com/gaoyifan/china-operator-ip/ip-lists/cernet.txt | perl -ne '/^(\d{1,3}(\.\d{1,3}){3}\/\d{1,2})/ && print "IP-CIDR,$1\n"' > master/educidr.txt
+          curl -sSL https://raw.githubusercontent.com/gaoyifan/china-operator-ip/ip-lists/cernet6.txt | grep ":" | perl -ne '/(.+\/\d+)/ && print "IP-CIDR,$1\n"' >> master/educidr.txt
           curl -o Rule-edu.conf https://raw.githubusercontent.com/TomKing062/Shadowrocket/main/Rule-edu.conf
           cat Head.conf Rule-edu.conf > master/Edu.conf
           sed -i "/test/d" master/Edu.conf
