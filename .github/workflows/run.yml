@@ -22,12 +22,21 @@ jobs:
           ref: master
           path: master
 
+      - name: Prepare Workstation
+        shell: bash
+        run: |
+          wget `curl -s https://api.github.com/repos/zhanhb/cidr-merger/releases/latest | grep -Po '(?<=download_url\"\: \").*linux-amd64'`
+          mv cidr-merger-linux-amd64 cidr-merger
+          chmod +x cidr-merger
+
       - name: Run
         run: |
           rm master/*
-          curl -sSL https://raw.githubusercontent.com/gaoyifan/china-operator-ip/ip-lists/china.txt | perl -ne '/^(\d{1,3}(\.\d{1,3}){3}\/\d{1,2})/ && print "IP-CIDR,$1\n"' > directcidr.txt
-          curl -sSL https://raw.githubusercontent.com/felixonmars/chnroutes-alike/master/chnroutes-alike.txt | perl -ne '/^(\d{1,3}(\.\d{1,3}){3}\/\d{1,2})/ && print "IP-CIDR,$1\n"' >> directcidr.txt
-          sort -u directcidr.txt > master/directcidr.txt
+          curl -sSL https://raw.githubusercontent.com/misakaio/chnroutes2/master/chnroutes.txt | sed '/^\#/d' > ipv4-1.txt
+          curl -sSL https://raw.githubusercontent.com/gaoyifan/china-operator-ip/ip-lists/china.txt > ipv4-2.txt
+          curl -sSL https://raw.githubusercontent.com/felixonmars/chnroutes-alike/master/chnroutes-alike.txt | sed '/^\#/d' > ipv4-3.txt
+          cat ipv4*.txt | ./cidr-merger -s > directcidr.txt
+          cat directcidr.txt | perl -ne '/^(\d{1,3}(\.\d{1,3}){3}\/\d{1,2})/ && print "IP-CIDR,$1\n"' >> master/directcidr.txt
           curl -sSL https://raw.githubusercontent.com/gaoyifan/china-operator-ip/ip-lists/china6.txt | perl -ne '/(.+\/\d+)/ && print "IP-CIDR,$1\n"' >> master/directcidr.txt
           curl -o StreamingSE.list https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list
           grep bili StreamingSE.list > master/Streaming.list
