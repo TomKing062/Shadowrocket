@@ -24,24 +24,23 @@ jobs:
       - name: Run
         run: |
           mkdir master
+          curl -sSL https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%204/Head.conf > Head.conf
+          curl -sSL https://raw.githubusercontent.com/TomKing062/Shadowrocket/main/Rule.conf > Rule.conf
+          curl -sSL https://raw.githubusercontent.com/TomKing062/Shadowrocket/main/Rule-edu.conf > Rule-edu.conf
+          curl -sSL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising_MITM.sgmodule > MITM.conf
+          curl -sSL https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list | grep bili > master/Streaming.list
+          
           curl -sSL https://raw.githubusercontent.com/misakaio/chnroutes2/master/chnroutes.txt | sed '/^\#/d' > ipv4-1.txt
           curl -sSL https://raw.githubusercontent.com/gaoyifan/china-operator-ip/ip-lists/china.txt > ipv4-2.txt
           curl -sSL https://raw.githubusercontent.com/felixonmars/chnroutes-alike/master/chnroutes-alike.txt | sed '/^\#/d' > ipv4-3.txt
-          cat ipv4*.txt | ./cidr-merger -s > directcidr.txt
-          cat directcidr.txt | perl -ne '/^(\d{1,3}(\.\d{1,3}){3}\/\d{1,2})/ && print "IP-CIDR,$1\n"' >> master/directcidr.txt
+          cat ipv4*.txt | ./cidr-merger -s | perl -ne '/^(\d{1,3}(\.\d{1,3}){3}\/\d{1,2})/ && print "IP-CIDR,$1\n"' > master/directcidr.txt
           curl -sSL https://raw.githubusercontent.com/gaoyifan/china-operator-ip/ip-lists/china6.txt | perl -ne '/(.+\/\d+)/ && print "IP-CIDR,$1\n"' >> master/directcidr.txt
-          curl -o StreamingSE.list https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list
-          grep bili StreamingSE.list > master/Streaming.list
-          curl -o Head.conf https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%204/Head.conf
-          curl -o Rule.conf https://raw.githubusercontent.com/TomKing062/Shadowrocket/main/Rule.conf
-          curl -o MITM.conf https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising_MITM.sgmodule
           cat Head.conf Rule.conf MITM.conf > master/Shadowrocket.conf
           sed -i "/test/d" master/Shadowrocket.conf
           sed -i "/#/d" master/Shadowrocket.conf
           
           curl -sSL https://raw.githubusercontent.com/gaoyifan/china-operator-ip/ip-lists/cernet.txt | perl -ne '/^(\d{1,3}(\.\d{1,3}){3}\/\d{1,2})/ && print "IP-CIDR,$1\n"' > master/educidr.txt
           curl -sSL https://raw.githubusercontent.com/gaoyifan/china-operator-ip/ip-lists/cernet6.txt | perl -ne '/(.+\/\d+)/ && print "IP-CIDR,$1\n"' >> master/educidr.txt
-          curl -o Rule-edu.conf https://raw.githubusercontent.com/TomKing062/Shadowrocket/main/Rule-edu.conf
           cat Head.conf Rule-edu.conf > master/Edu.conf
           sed -i "/test/d" master/Edu.conf
           sed -i "/#/d" master/Edu.conf
