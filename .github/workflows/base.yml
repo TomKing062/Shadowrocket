@@ -14,6 +14,17 @@ jobs:
           keep_minimum_runs: 0
           delete_workflow_pattern: base
 
+      - name: Setup Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: 1.18
+
+      - name: Checkout v2fly/domain-list-community
+        uses: actions/checkout@v3
+        with:
+          repository: v2fly/domain-list-community
+          path: domain-list-community
+
       - name: Prepare Workstation
         shell: bash
         run: |
@@ -44,6 +55,10 @@ jobs:
           cat Head.conf Rule-edu.conf > master/Edu.conf
           sed -i "/test/d" master/Edu.conf
           sed -i "/#/d" master/Edu.conf
+          
+          cd domain-list-community
+          go run ./ --exportlists=google-ads
+          cat google-ads.txt | grep -E "^domain:" | awk -F ':' '{printf "DOMAIN-SUFFIX,%s\n", $2}' > ../master/google-ads.list
 
       - name: push
         run: |
