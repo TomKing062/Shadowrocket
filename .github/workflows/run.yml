@@ -65,8 +65,10 @@ jobs:
           sed -i "/#/d" master/Edu.conf
           
           cd domain-list-community
-          go run ./ --exportlists=google-ads
+          go run ./ --exportlists=google-ads,google
           cat google-ads.txt | grep -E "^domain:" | awk -F ':' '{printf "DOMAIN-SUFFIX,%s\n", $2}' > ../master/google-ads.list
+          cat google.txt | grep -E "^full:" | awk -F ':' '{printf "DOMAIN,%s\n", $2}' > ../master/google.list
+          cat google.txt | grep -E "^domain:" | awk -F ':' '{printf "DOMAIN-SUFFIX,%s\n", $2}' >> ../master/google.list
 
       - name: push
         run: |
