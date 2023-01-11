@@ -365,12 +365,17 @@ DOMAIN-SUFFIX,googletagservices.com
 DOMAIN-SUFFIX,googletraveladservices.com
 DOMAIN-SUFFIX,urchin.com
 DOMAIN-SUFFIX,charlestonroadregistry.com
+DOMAIN-SUFFIX,crr.com
 DOMAIN-SUFFIX,registry.google
 DOMAIN-SUFFIX,get.app
 DOMAIN-SUFFIX,get.dev
 DOMAIN-SUFFIX,get.how
+DOMAIN-SUFFIX,get.new
 DOMAIN-SUFFIX,get.page
+DOMAIN-SUFFIX,get.rsvp
+DOMAIN-SUFFIX,hey.boo
 DOMAIN-SUFFIX,iam.soy
+DOMAIN-SUFFIX,new.day
 DOMAIN-SUFFIX,xn--p8j9a0d9c9a.xn--q9jyb4c
 DOMAIN-SUFFIX,pki.goog
 DOMAIN-SUFFIX,kaggle.com
@@ -819,7 +824,6 @@ DOMAIN-SUFFIX,coova.com
 DOMAIN-SUFFIX,coova.net
 DOMAIN-SUFFIX,coova.org
 DOMAIN-SUFFIX,crossmediapanel.com
-DOMAIN-SUFFIX,crr.com
 DOMAIN-SUFFIX,cs4hs.com
 DOMAIN-SUFFIX,dartsearch.net
 DOMAIN-SUFFIX,dataliberation.org
@@ -860,6 +864,7 @@ DOMAIN-SUFFIX,goo.gl
 DOMAIN-SUFFIX,googel.com
 DOMAIN-SUFFIX,googil.com
 DOMAIN-SUFFIX,googl.com
+DOMAIN-SUFFIX,google-access.net
 DOMAIN-SUFFIX,google-syndication.com
 DOMAIN-SUFFIX,google.berlin
 DOMAIN-SUFFIX,google.dev
