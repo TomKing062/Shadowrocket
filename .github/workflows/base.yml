@@ -60,7 +60,9 @@ jobs:
           sed -i "/#/d" master/Edu.conf
           
           cd domain-list-community
-          echo "include:category-scholar-!cn" > data/scholar
+          echo "include:category-education-cn" > data/scholar
+          echo "include:category-mooc-cn" >> data/scholar
+          echo "include:category-scholar-!cn" >> data/scholar
           echo "include:category-scholar-cn" >> data/scholar
           go run ./ --exportlists=google-ads,google,scholar
           cat google-ads.txt | grep -E "^domain:" | awk -F ':' '{printf "DOMAIN-SUFFIX,%s\n", $2}' > ../master/google-ads.list
