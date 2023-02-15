@@ -50,6 +50,8 @@ jobs:
           cat Head.conf Rule.conf MITM.conf > master/Shadowrocket.conf
           sed -i "/#/d" master/Shadowrocket.conf
           
+          curl -sSL https://raw.githubusercontent.com/Johnshall/cn-blocked-domain/release/domains.txt | perl -ne '/(.+\..+)/ && print "DOMAIN-SUFFIX,$1\n"' > master/greatfire.list
+          curl -sSL https://raw.githubusercontent.com/Johnshall/cn-blocked-domain/release/ip.txt | ./cidr-merger -s | perl -ne '/(.+\/\d+)/ && print "IP-CIDR,$1\n"' > master/gfwcidr.txt
           curl -sSL https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/telegram.txt | perl -ne '/(.+\/\d+)/ && print "IP-CIDR,$1\n"' > master/tgcidr.txt
           cat Head.conf Rule-blacklist.conf MITM.conf > master/Blacklist.conf
           sed -i "/#/d" master/Blacklist.conf
