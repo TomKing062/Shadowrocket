@@ -41,6 +41,7 @@ jobs:
           curl -sSL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising_MITM.sgmodule > MITM.conf
           curl -sSL https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list | grep bili > master/Streaming.list
           sed -i "/generate/d" Head.conf
+          echo "" >> Head.conf
           
           curl -sSL https://raw.githubusercontent.com/misakaio/chnroutes2/master/chnroutes.txt > ipv4-1.txt
           curl -sSL https://raw.githubusercontent.com/gaoyifan/china-operator-ip/ip-lists/china.txt > ipv4-2.txt
