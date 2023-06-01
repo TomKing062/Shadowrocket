@@ -1,3 +1,4 @@
+DOMAIN,analytics.google.com
 DOMAIN,scholar.google.ae
 DOMAIN,scholar.google.at
 DOMAIN,scholar.google.be
@@ -88,6 +89,19 @@ DOMAIN,alt6-mtalk.google.com
 DOMAIN,alt7-mtalk.google.com
 DOMAIN,alt8-mtalk.google.com
 DOMAIN,mtalk.google.com
+DOMAIN,firebase-settings.crashlytics.com
+DOMAIN,firebase.google.com
+DOMAIN,firebase.googleapis.com
+DOMAIN,firebaseappcheck.googleapis.com
+DOMAIN,firebasedynamiclinks-ipv4.googleapis.com
+DOMAIN,firebasedynamiclinks-ipv6.googleapis.com
+DOMAIN,firebasedynamiclinks.googleapis.com
+DOMAIN,firebaseinappmessaging.googleapis.com
+DOMAIN,firebaseinstallations.googleapis.com
+DOMAIN,firebaselogging-pa.googleapis.com
+DOMAIN,firebaselogging.googleapis.com
+DOMAIN,firebaseperusertopics-pa.googleapis.com
+DOMAIN,firebaseremoteconfig.googleapis.com
 DOMAIN,www.recaptcha.net
 DOMAIN,265.com
 DOMAIN,2mdn-cn.net
@@ -139,7 +153,6 @@ DOMAIN,download.qcpp1.net
 DOMAIN,download.qpdp1.net
 DOMAIN,download.tensorflow.google.com
 DOMAIN,emmapplecodevice.googleapis.com
-DOMAIN,firebase-settings.crashlytics.com
 DOMAIN,fontfiles.googleadapis.com
 DOMAIN,fontfiles.googleapis.com
 DOMAIN,fonts.googleadapis.com
@@ -771,6 +784,10 @@ DOMAIN-SUFFIX,google.tt
 DOMAIN-SUFFIX,google.vg
 DOMAIN-SUFFIX,google.vu
 DOMAIN-SUFFIX,google.ws
+DOMAIN-SUFFIX,firebase.com
+DOMAIN-SUFFIX,firebase.io
+DOMAIN-SUFFIX,firebaseapp.com
+DOMAIN-SUFFIX,firebaseio.com
 DOMAIN-SUFFIX,0emm.com
 DOMAIN-SUFFIX,1e100.net
 DOMAIN-SUFFIX,1ucrs.com
@@ -839,8 +856,6 @@ DOMAIN-SUFFIX,episodic.com
 DOMAIN-SUFFIX,feedburner.com
 DOMAIN-SUFFIX,fflick.com
 DOMAIN-SUFFIX,financeleadsonline.com
-DOMAIN-SUFFIX,firebaseapp.com
-DOMAIN-SUFFIX,firebaseio.com
 DOMAIN-SUFFIX,foofle.com
 DOMAIN-SUFFIX,froogle.com
 DOMAIN-SUFFIX,fuchsia.dev
