@@ -16,7 +16,7 @@ jobs:
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
-          go-version: 1.18
+          go-version: 1.21
 
       - name: Checkout v2fly/domain-list-community
         uses: actions/checkout@v4
