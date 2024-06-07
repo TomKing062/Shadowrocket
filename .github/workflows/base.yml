@@ -38,8 +38,8 @@ jobs:
           curl -sSL https://raw.githubusercontent.com/TomKing062/Shadowrocket/main/Rule.conf > Rule.conf
           curl -sSL https://raw.githubusercontent.com/TomKing062/Shadowrocket/main/Rule-blacklist.conf > Rule-blacklist.conf
           curl -sSL https://raw.githubusercontent.com/TomKing062/Shadowrocket/main/Rule-edu.conf > Rule-edu.conf
+          curl -sSL https://raw.githubusercontent.com/TomKing062/Shadowrocket/main/Streaming.list > master/Streaming.list
           curl -sSL https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Advertising/Advertising_MITM.sgmodule > MITM.conf
-          curl -sSL https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list | grep bili > master/Streaming.list
           sed -i "/generate/d" Head.conf
           echo "" >> Head.conf
           
