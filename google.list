@@ -436,6 +436,11 @@ DOMAIN-SUFFIX,googletraveladservices.com
 DOMAIN-SUFFIX,googlevads-cn.com
 DOMAIN-SUFFIX,marketingplatform.google.com
 DOMAIN-SUFFIX,urchin.com
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,ai.google.dev
+DOMAIN-SUFFIX,aistudio.google.com
+DOMAIN-SUFFIX,generativelanguage.googleapis.com
+DOMAIN-SUFFIX,alkalimakersuite-pa.clients6.google.com
 DOMAIN-SUFFIX,charlestonroadregistry.com
 DOMAIN-SUFFIX,crr.com
 DOMAIN-SUFFIX,registry.google
