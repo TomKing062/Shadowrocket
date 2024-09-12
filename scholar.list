@@ -123,6 +123,18 @@ DOMAIN-SUFFIX,yudou.cn
 DOMAIN-SUFFIX,yushiyan.net
 DOMAIN-SUFFIX,xuetangx.com
 DOMAIN-SUFFIX,x-cloud.cc
+DOMAIN-SUFFIX,kuaiduizuoye.com
+DOMAIN-SUFFIX,liulishuo.com
+DOMAIN-SUFFIX,llsapp.com
+DOMAIN-SUFFIX,llscdn.com
+DOMAIN-SUFFIX,llsserver.com
+DOMAIN-SUFFIX,baicizhan.com
+DOMAIN-SUFFIX,baicizhan.org
+DOMAIN-SUFFIX,bczcdn.com
+DOMAIN-SUFFIX,bczeducation.cn
+DOMAIN-SUFFIX,zhan.com
+DOMAIN-SUFFIX,burningvocabulary.cn
+DOMAIN-SUFFIX,burningvocabulary.com
 DOMAIN-SUFFIX,dgjy.net
 DOMAIN-SUFFIX,91yunxiao.com
 DOMAIN-SUFFIX,aiyunxiao.com
@@ -133,6 +145,10 @@ DOMAIN-SUFFIX,keboyunxiao.com
 DOMAIN-SUFFIX,ketangpai.com
 DOMAIN-SUFFIX,pigai.org
 DOMAIN-SUFFIX,weilaiyunxiao.com
+DOMAIN-SUFFIX,magedu.com
+DOMAIN-SUFFIX,oldboyedu.com
+DOMAIN-SUFFIX,eduei.com
+DOMAIN-SUFFIX,edu.cn
 DOMAIN-SUFFIX,chinesemooc.org
 DOMAIN-SUFFIX,cnmooc.org
 DOMAIN-SUFFIX,icourse163.org
@@ -513,6 +529,7 @@ DOMAIN-SUFFIX,zaifan.com.cn
 DOMAIN-SUFFIX,zhihang100.com
 DOMAIN-SUFFIX,cnki.com.cn
 DOMAIN-SUFFIX,cnki.net
+DOMAIN-SUFFIX,chndoi.org
 DOMAIN-SUFFIX,wanfangdata.com.cn
 DOMAIN-SUFFIX,wf.pub
 DOMAIN-SUFFIX,51ccd.com
