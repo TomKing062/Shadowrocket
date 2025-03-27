@@ -117,6 +117,7 @@ DOMAIN,mtalk.google.com
 DOMAIN,mtalk4.google.com
 DOMAIN,google-ohttp-relay-safebrowsing.fastly-edge.com
 DOMAIN,www.recaptcha.net
+DOMAIN,safebrowsing-cache.google.com
 DOMAIN,265.com
 DOMAIN,2mdn-cn.net
 DOMAIN,2mdn.net
