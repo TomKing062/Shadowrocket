@@ -180,8 +180,6 @@ DOMAIN-SUFFIX,android
 DOMAIN-SUFFIX,android.com
 DOMAIN-SUFFIX,androidify.com
 DOMAIN-SUFFIX,angulardart.org
-DOMAIN-SUFFIX,antigravity-unleash.goog
-DOMAIN-SUFFIX,antigravity.google
 DOMAIN-SUFFIX,api.ai
 DOMAIN-SUFFIX,apigee.com
 DOMAIN-SUFFIX,app-analytics-services-att.com
@@ -321,7 +319,6 @@ DOMAIN-SUFFIX,dclk
 DOMAIN-SUFFIX,debug.com
 DOMAIN-SUFFIX,debugproject.com
 DOMAIN-SUFFIX,deepmind.com
-DOMAIN-SUFFIX,deepmind.google
 DOMAIN-SUFFIX,deps.dev
 DOMAIN-SUFFIX,deps.info
 DOMAIN-SUFFIX,devsitetest.how
@@ -357,8 +354,6 @@ DOMAIN-SUFFIX,g.page
 DOMAIN-SUFFIX,gateway.dev
 DOMAIN-SUFFIX,gbiz
 DOMAIN-SUFFIX,gcr.io
-DOMAIN-SUFFIX,gemini.google
-DOMAIN-SUFFIX,generativeai.google
 DOMAIN-SUFFIX,gerritcodereview.com
 DOMAIN-SUFFIX,get.app
 DOMAIN-SUFFIX,get.dev
@@ -685,7 +680,6 @@ DOMAIN-SUFFIX,impermium.com
 DOMAIN-SUFFIX,itasoftware.com
 DOMAIN-SUFFIX,j2objc.org
 DOMAIN-SUFFIX,jibemobile.com
-DOMAIN-SUFFIX,jules.google
 DOMAIN-SUFFIX,kaggle.com
 DOMAIN-SUFFIX,kaggle.io
 DOMAIN-SUFFIX,kaggle.net
@@ -694,7 +688,6 @@ DOMAIN-SUFFIX,keyhole.com
 DOMAIN-SUFFIX,keytransparency.com
 DOMAIN-SUFFIX,keytransparency.foo
 DOMAIN-SUFFIX,keytransparency.org
-DOMAIN-SUFFIX,labs.google
 DOMAIN-SUFFIX,lanternal.com
 DOMAIN-SUFFIX,like.com
 DOMAIN-SUFFIX,madewithcode.com
@@ -712,14 +705,12 @@ DOMAIN-SUFFIX,nest.com
 DOMAIN-SUFFIX,new.day
 DOMAIN-SUFFIX,nexus
 DOMAIN-SUFFIX,nomulus.foo
-DOMAIN-SUFFIX,notebooklm.google
 DOMAIN-SUFFIX,oauthz.com
 DOMAIN-SUFFIX,on.here
 DOMAIN-SUFFIX,on2.com
 DOMAIN-SUFFIX,onefifteen.net
 DOMAIN-SUFFIX,onefifteen.org
 DOMAIN-SUFFIX,oneworldmanystories.com
-DOMAIN-SUFFIX,opal.google
 DOMAIN-SUFFIX,opensourceinsight.dev
 DOMAIN-SUFFIX,opensourceinsights.dev
 DOMAIN-SUFFIX,openthread.io
@@ -740,7 +731,6 @@ DOMAIN-SUFFIX,picasaweb.org
 DOMAIN-SUFFIX,picnik.com
 DOMAIN-SUFFIX,pittpatt.com
 DOMAIN-SUFFIX,pixate.com
-DOMAIN-SUFFIX,pki.goog
 DOMAIN-SUFFIX,polymer-project.org
 DOMAIN-SUFFIX,polymerproject.org
 DOMAIN-SUFFIX,postini.com
@@ -752,7 +742,6 @@ DOMAIN-SUFFIX,publishproxy.com
 DOMAIN-SUFFIX,questvisual.com
 DOMAIN-SUFFIX,quickoffice.com
 DOMAIN-SUFFIX,quiksee.com
-DOMAIN-SUFFIX,registry.google
 DOMAIN-SUFFIX,revolv.com
 DOMAIN-SUFFIX,ridepenguin.com
 DOMAIN-SUFFIX,run.app
