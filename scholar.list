@@ -7,7 +7,6 @@ DOMAIN,elib.maruzen.co.jp
 DOMAIN,firstsearch.oclc.org
 DOMAIN,imperial.insendi.com
 DOMAIN,medone-education.thieme.com
-DOMAIN,moocs.unipus.cn
 DOMAIN,muse.jhu.edu
 DOMAIN,scholar.google.ae
 DOMAIN,scholar.google.at
@@ -598,6 +597,7 @@ DOMAIN-SUFFIX,ukwhoswho.com
 DOMAIN-SUFFIX,umajor.net
 DOMAIN-SUFFIX,umass.edu
 DOMAIN-SUFFIX,unihan.com.cn
+DOMAIN-SUFFIX,unipus.cn
 DOMAIN-SUFFIX,universitypressscholarship.com
 DOMAIN-SUFFIX,uonline-sh.com
 DOMAIN-SUFFIX,uonline-sh.net
