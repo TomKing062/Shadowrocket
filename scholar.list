@@ -88,6 +88,7 @@ DOMAIN,study.163.com
 DOMAIN,t21.nikkei.co.jp
 DOMAIN,t21ipau.nikkei.co.jp
 DOMAIN,wrds-www.wharton.upenn.edu
+DOMAIN-SUFFIX,100tal.com
 DOMAIN-SUFFIX,16q.cn
 DOMAIN-SUFFIX,17zuoye.cn
 DOMAIN-SUFFIX,17zuoye.com
@@ -102,6 +103,7 @@ DOMAIN-SUFFIX,1lib.pl
 DOMAIN-SUFFIX,1lib.sk
 DOMAIN-SUFFIX,1lib.to
 DOMAIN-SUFFIX,1lib.tw
+DOMAIN-SUFFIX,21cnjy.com
 DOMAIN-SUFFIX,2lib.org
 DOMAIN-SUFFIX,3lib.net
 DOMAIN-SUFFIX,51ccd.com
@@ -134,6 +136,7 @@ DOMAIN-SUFFIX,anatomy.tv
 DOMAIN-SUFFIX,anb.org
 DOMAIN-SUFFIX,ancientbooks.cn
 DOMAIN-SUFFIX,annualreviews.org
+DOMAIN-SUFFIX,aoshu.com
 DOMAIN-SUFFIX,apa.org
 DOMAIN-SUFFIX,apabi.com
 DOMAIN-SUFFIX,applysquare.com
@@ -268,6 +271,8 @@ DOMAIN-SUFFIX,ebscohost.com
 DOMAIN-SUFFIX,edu.cn
 DOMAIN-SUFFIX,edu.ir
 DOMAIN-SUFFIX,eduei.com
+DOMAIN-SUFFIX,eduu.com
+DOMAIN-SUFFIX,eduuu.com
 DOMAIN-SUFFIX,electrochem.org
 DOMAIN-SUFFIX,elgaronline.com
 DOMAIN-SUFFIX,elifesciences.org
@@ -299,6 +304,7 @@ DOMAIN-SUFFIX,frontiersin.org
 DOMAIN-SUFFIX,fundinginstitutional.com
 DOMAIN-SUFFIX,gale.com
 DOMAIN-SUFFIX,galegroup.com
+DOMAIN-SUFFIX,gaokao.com
 DOMAIN-SUFFIX,gatzs.com.cn
 DOMAIN-SUFFIX,geolytics.com
 DOMAIN-SUFFIX,gfbzb.cn
@@ -579,6 +585,7 @@ DOMAIN-SUFFIX,study360.com.cn
 DOMAIN-SUFFIX,superlib.com
 DOMAIN-SUFFIX,superlib.net
 DOMAIN-SUFFIX,sydw8.com
+DOMAIN-SUFFIX,tal.com
 DOMAIN-SUFFIX,tandf.co.uk
 DOMAIN-SUFFIX,tandfonline.com
 DOMAIN-SUFFIX,taylorandfrancis.com
@@ -628,6 +635,7 @@ DOMAIN-SUFFIX,worldscientific.com
 DOMAIN-SUFFIX,x-cloud.cc
 DOMAIN-SUFFIX,xesimg.com
 DOMAIN-SUFFIX,xiaoyuankousuan.com
+DOMAIN-SUFFIX,xiguacity.cn
 DOMAIN-SUFFIX,xir.cn
 DOMAIN-SUFFIX,xiyouyingyu.com
 DOMAIN-SUFFIX,xkw.com
@@ -642,6 +650,7 @@ DOMAIN-SUFFIX,ybccode.com
 DOMAIN-SUFFIX,yeshj.com
 DOMAIN-SUFFIX,yiigle.com
 DOMAIN-SUFFIX,ylike.net
+DOMAIN-SUFFIX,youjiao.com
 DOMAIN-SUFFIX,ystbds.com
 DOMAIN-SUFFIX,yuanfudao.com
 DOMAIN-SUFFIX,yuansouti.com
@@ -668,9 +677,15 @@ DOMAIN-SUFFIX,zgsydw.com
 DOMAIN-SUFFIX,zhan.com
 DOMAIN-SUFFIX,zhihang100.com
 DOMAIN-SUFFIX,zhihuishu.com
+DOMAIN-SUFFIX,zhongkao.com
 DOMAIN-SUFFIX,zjzs.net
 DOMAIN-SUFFIX,zlib.life
 DOMAIN-SUFFIX,zlibcdn.com
 DOMAIN-SUFFIX,zlibcdn2.com
+DOMAIN-SUFFIX,zuowen.com
+DOMAIN-SUFFIX,zuowen8.com
+DOMAIN-SUFFIX,zuowenjun.com
+DOMAIN-SUFFIX,zuowenku.net
+DOMAIN-SUFFIX,zuowenwang.net
 DOMAIN-SUFFIX,zxxk.com
 DOMAIN-SUFFIX,zysn.net
