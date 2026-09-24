@@ -197,12 +197,14 @@ DOMAIN-SUFFIX,brill.com
 DOMAIN-SUFFIX,burningvocabulary.cn
 DOMAIN-SUFFIX,burningvocabulary.com
 DOMAIN-SUFFIX,bvdinfo.com
+DOMAIN-SUFFIX,cae.cn
 DOMAIN-SUFFIX,cairn.info
 DOMAIN-SUFFIX,cambridge.org
 DOMAIN-SUFFIX,cambridgedigital.net
 DOMAIN-SUFFIX,cambridgemaths.org
 DOMAIN-SUFFIX,cambridgeschoolshakespeare.com
 DOMAIN-SUFFIX,capitaliq.com
+DOMAIN-SUFFIX,cas.cn
 DOMAIN-SUFFIX,cas.org
 DOMAIN-SUFFIX,cbern.com.cn
 DOMAIN-SUFFIX,ccf.org.cn
@@ -226,6 +228,7 @@ DOMAIN-SUFFIX,chesicc.net
 DOMAIN-SUFFIX,chesicc.net.cn
 DOMAIN-SUFFIX,chesicc.org.cn
 DOMAIN-SUFFIX,chinabooktrading.com
+DOMAIN-SUFFIX,chinaxiv.org
 DOMAIN-SUFFIX,chinayz.com.cn
 DOMAIN-SUFFIX,chinesemooc.org
 DOMAIN-SUFFIX,chndoi.org
@@ -316,6 +319,7 @@ DOMAIN-SUFFIX,fundinginstitutional.com
 DOMAIN-SUFFIX,gale.com
 DOMAIN-SUFFIX,galegroup.com
 DOMAIN-SUFFIX,gaojidata.com
+DOMAIN-SUFFIX,gaokao.cn
 DOMAIN-SUFFIX,gaokao.com
 DOMAIN-SUFFIX,gatzs.com.cn
 DOMAIN-SUFFIX,geolytics.com
@@ -349,6 +353,7 @@ DOMAIN-SUFFIX,hotcrp.com
 DOMAIN-SUFFIX,htcases.com
 DOMAIN-SUFFIX,huatu.com
 DOMAIN-SUFFIX,hugecore.net
+DOMAIN-SUFFIX,huijiaoyun.com
 DOMAIN-SUFFIX,hujiang.com
 DOMAIN-SUFFIX,hwshu.com
 DOMAIN-SUFFIX,hytung.cn
@@ -456,6 +461,7 @@ DOMAIN-SUFFIX,magedu.com
 DOMAIN-SUFFIX,maimemo.com
 DOMAIN-SUFFIX,maimemostatus.com
 DOMAIN-SUFFIX,markji.com
+DOMAIN-SUFFIX,mddclass.com
 DOMAIN-SUFFIX,mdpi.com
 DOMAIN-SUFFIX,medalink.cn
 DOMAIN-SUFFIX,medicexam.net
@@ -597,6 +603,7 @@ DOMAIN-SUFFIX,singlelogin.me
 DOMAIN-SUFFIX,singlelogin.re
 DOMAIN-SUFFIX,singlelogin.site
 DOMAIN-SUFFIX,sipriyearbook.org
+DOMAIN-SUFFIX,sksight.com
 DOMAIN-SUFFIX,smartedu.cn
 DOMAIN-SUFFIX,speiyou.com
 DOMAIN-SUFFIX,spiedigitallibrary.org
@@ -616,6 +623,7 @@ DOMAIN-SUFFIX,study360.com.cn
 DOMAIN-SUFFIX,superlib.com
 DOMAIN-SUFFIX,superlib.net
 DOMAIN-SUFFIX,sydw8.com
+DOMAIN-SUFFIX,syh.zybang.com
 DOMAIN-SUFFIX,tal.com
 DOMAIN-SUFFIX,tandf.co.uk
 DOMAIN-SUFFIX,tandfonline.com
@@ -742,10 +750,14 @@ DOMAIN-SUFFIX,zjzs.net
 DOMAIN-SUFFIX,zlib.life
 DOMAIN-SUFFIX,zlibcdn.com
 DOMAIN-SUFFIX,zlibcdn2.com
+DOMAIN-SUFFIX,zsyyb.cn
 DOMAIN-SUFFIX,zuowen.com
 DOMAIN-SUFFIX,zuowen8.com
 DOMAIN-SUFFIX,zuowenjun.com
 DOMAIN-SUFFIX,zuowenku.net
 DOMAIN-SUFFIX,zuowenwang.net
+DOMAIN-SUFFIX,zuoyebang.cc
+DOMAIN-SUFFIX,zuoyebang.com
 DOMAIN-SUFFIX,zxxk.com
+DOMAIN-SUFFIX,zybang.com
 DOMAIN-SUFFIX,zysn.net
